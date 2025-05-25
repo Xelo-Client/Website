@@ -1,0 +1,201 @@
+:root {
+  --bg: #fff;
+  --fg: #111;
+  --accent: #000;
+  --border: #e5e5e5;
+  --btn-bg: #000;
+  --btn-fg: #fff;
+  --btn-hover-bg: #222;
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Segoe UI', Arial, sans-serif;
+  background: var(--bg);
+  color: var(--fg);
+  min-height: 100vh;
+}
+
+header {
+  padding: 2rem 1rem 1rem 1rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg);
+}
+
+header h1 {
+  font-size: 2.4rem;
+  letter-spacing: 0.04em;
+  font-weight: 900;
+  margin: 0 0 0.5rem 0;
+}
+
+nav {
+  display: flex;
+  gap: 2rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--fg);
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 0.2rem;
+  transition: color var(--transition);
+}
+
+nav a.active, nav a:hover {
+  color: var(--accent);
+}
+
+nav a.active::after, nav a:hover::after {
+  content: '';
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+  height: 2px;
+  background: var(--accent);
+  border-radius: 2px;
+  transition: width var(--transition);
+}
+
+main {
+  max-width: 600px;
+  margin: 3rem auto 2rem auto;
+  padding: 0 1rem;
+}
+
+.intro, .repos, .download-manager {
+  margin-bottom: 2.5rem;
+  background: #fafafa;
+  border-radius: 12px;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.03);
+}
+
+.intro h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.intro p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--btn-bg);
+  color: var(--btn-fg);
+  padding: 0.7em 1.7em;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  transition: background var(--transition), color var(--transition);
+  cursor: pointer;
+  font-size: 1rem;
+  margin-top: 1rem;
+}
+
+.btn:hover, .btn:focus {
+  background: var(--btn-hover-bg);
+  color: var(--btn-fg);
+}
+
+.repos h3 {
+  font-size: 1.15rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.repos ul, .downloads-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.repos li, .downloads-list li {
+  margin-bottom: 1.2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.repos a, .downloads-list a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  transition: color var(--transition);
+}
+
+.repos a:hover, .downloads-list a:hover {
+  text-decoration: underline;
+}
+
+.downloads-list span {
+  flex: 1;
+  font-weight: 500;
+  color: #333;
+}
+
+.note {
+  margin-top: 2rem;
+  color: #888;
+  font-size: 0.95rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  border-top: 1px solid var(--border);
+  color: #aaa;
+  background: var(--bg);
+}
+
+footer a {
+  color: var(--fg);
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 0;
+  }
+  .intro, .repos, .download-manager {
+    padding: 1.2rem 0.7rem;
+  }
+  header {
+    padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+  }
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.8s forwards;
+}
+
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(24px);
+  animation: fadeInUp 0.9s 0.2s forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
