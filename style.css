@@ -1,10 +1,29 @@
 :root {
   --bg: #fff;
+  --bg2: #fafafa;
+  --tc: #000;
+  --tc3: #1c1c1c;
+  --primary-color: #000;
   --fg: #111;
   --accent: #000;
   --border: #e5e5e5;
   --btn-bg: #000;
   --btn-fg: #fff;
+  --btn-hover-bg: #222;
+  --transition: 0.3s cubic-bezier(.4,0,.2,1);
+}
+
+.darkmode{
+  --bg: #121212;
+  --primary-color: #fff;
+  --tc3: #f2f5f3;
+  --bg2: #1f1f1f;
+  --tc: #fff;
+  --fg: #fff;
+  --accent: #fff;
+  --border: #e5e5e5;
+  --btn-bg: #fff;
+  --btn-fg: #000;
   --btn-hover-bg: #222;
   --transition: 0.3s cubic-bezier(.4,0,.2,1);
 }
@@ -31,6 +50,7 @@ header h1 {
   font-size: 2.4rem;
   letter-spacing: 0.04em;
   font-weight: 900;
+  color: var(--tc);
   margin: 0 0 0.5rem 0;
 }
 
@@ -71,7 +91,7 @@ main {
 
 .intro, .repos, .download-manager {
   margin-bottom: 2.5rem;
-  background: #fafafa;
+  background: var(--bg2);
   border-radius: 12px;
   padding: 2rem 1.5rem;
   box-shadow: 0 2px 16px rgba(0,0,0,0.03);
@@ -106,6 +126,60 @@ main {
 .btn:hover, .btn:focus {
   background: var(--btn-hover-bg);
   color: var(--btn-fg);
+}
+
+.idk {
+  height: 45px;
+  width: 45px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 30px;
+  left: 20px;
+}
+
+button{
+  border: none;
+  padding: .8em 2em;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  font: inherit;
+  text-transform: uppercase;
+  font-weight: 500;
+  cursor: pointer;
+}
+.cta-button{
+  background-color: var(--accent-color);
+}
+#theme-switch{
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  border-radius: 50%;
+  background-color: var(--base-variant);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+}
+#theme-switch svg{
+  fill: var(--primary-color);
+}
+#theme-switch svg:last-child{
+  display: none;
+}
+.darkmode #theme-switch svg:first-child{
+  display: none;
+}
+.darkmode #theme-switch svg:last-child{
+  display: block;
 }
 
 .repos h3 {
@@ -146,10 +220,19 @@ main {
 
 .note {
   margin-top: 2rem;
-  color: #888;
+  color: var(--tc3);
   font-size: 0.95rem;
 }
-
+.note a:not(.btn) {
+  color: var(--accent);
+  text-decoration: underline;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.note a:not(.btn):hover {
+  color: var(--accent);
+}
+    
 footer {
   text-align: center;
   padding: 2rem 1rem 1rem 1rem;
