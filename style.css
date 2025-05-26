@@ -131,6 +131,7 @@ main {
 .idk {
   height: 45px;
   width: 45px;
+  fill: var(--primary-color);
   padding: 0;
   border-radius: 50%;
   background-color: var(--base-variant);
