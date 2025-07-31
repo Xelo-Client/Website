@@ -62,9 +62,10 @@ document.addEventListener('DOMContentLoaded', () => {
         window.addEventListener('scroll', () => {
             // Change navbar background color when scrolling down
             if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+                // Using CSS variables for background with transparency
+                navbar.style.background = 'hsl(var(--primary) / 0.98)';
             } else {
-                navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+                navbar.style.background = 'hsl(var(--primary) / 0.95)';
             }
         });
     }
@@ -107,7 +108,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 height: ${size}px;
                 left: ${x}px;
                 top: ${y}px;
-                background: rgba(255, 255, 255, 0.1);
+                background: hsl(var(--opposite) / 0.1); /* Use opposite with transparency */
                 border-radius: 50%;
                 transform: scale(0);
                 animation: ripple 0.6s ease-out;
@@ -194,9 +195,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // Navbar background
         if (navbar) {
             if (window.scrollY > 50) {
-                navbar.style.background = 'rgba(10, 10, 10, 0.98)';
+                navbar.style.background = 'hsl(var(--primary) / 0.98)';
             } else {
-                navbar.style.background = 'rgba(10, 10, 10, 0.95)';
+                navbar.style.background = 'hsl(var(--primary) / 0.95)';
             }
         }
         

@@ -71,7 +71,7 @@
             <h1>Xelo Lite</h1>
             <p>A lightweight texture pack version of Xelo Client for players who can't use the full Xelo Client. Supports all versions with enhanced visual features.</p>
             <div class="cta-buttons">
-                <a href="#download" class="btn btn-primary">Download Xelo Lite</a>
+                <a href="#" class="btn btn-primary">Download Xelo Lite</a>
                 <a href="#features" class="btn btn-secondary">View Features</a>
             </div>
         </div>
@@ -84,9 +84,9 @@
 
     <!-- Download Section -->
     <section id="download" class="download">
-        <h2 class="fade-in">Download Xelo Lite</h2>
-        <p class="fade-in">Choose your preferred download method. Xelo Lite works with all Minecraft Bedrock Edition versions.</p>
-        <div class="download-options fade-in">
+        <h2>Download Xelo Lite</h2>
+        <p>Choose your preferred download method. Xelo Lite works with all Minecraft Bedrock Edition versions.</p>
+        <div class="download-options">
             <div class="download-card">
                 <h3>Latest Version</h3>
                 <p>Xelo Lite v2.1</p>
@@ -100,7 +100,7 @@
                 <a href="#" class="btn btn-secondary">Download Beta</a>
             </div>
         </div>
-        <div class="social-links fade-in">
+        <div class="social-links">
             <a href="https://github.com/Xelo-Client" target="_blank" class="social-btn">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                     <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
@@ -119,8 +119,8 @@
     <!-- Installation Guide -->
     <section class="installation-guide">
         <div class="guide-container">
-            <h2 class="fade-in">How to Install</h2>
-            <div class="steps-grid fade-in">
+            <h2>How to Install</h2>
+            <div class="steps-grid">
                 <div class="step">
                     <div class="step-number">1</div>
                     <h3>Download</h3>
@@ -145,152 +145,9 @@
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="footer-content">
-            <div class="footer-links">
-                <a href="index.html">Home</a>
-                <a href="Xelo-mod.html">Xelo Mod</a>
-                <a href="#privacy">Privacy Policy</a>
-                <a href="#terms">Terms of Service</a>
-                <a href="#support">Support</a>
-                <a href="https://github.com/Xelo-Client" target="_blank">GitHub</a>
-                <a href="https://discord.gg/5cAhBna4WS" target="_blank">Discord</a>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2025 Xelo Client. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <script>
-        // Enhanced JavaScript with mobile drawer functionality
-        document.addEventListener('DOMContentLoaded', () => {
-            // Mobile drawer elements
-            const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-            const mobileDrawer = document.getElementById('mobileDrawer');
-            const closeDrawer = document.getElementById('closeDrawer');
-            const drawerOverlay = document.getElementById('drawerOverlay');
-
-            // Toggle mobile drawer
-            function toggleDrawer() {
-                mobileDrawer.classList.toggle('open');
-                drawerOverlay.classList.toggle('active');
-                document.body.classList.toggle('drawer-open');
-            }
-
-            // Close mobile drawer
-            function closeDrawerFn() {
-                mobileDrawer.classList.remove('open');
-                drawerOverlay.classList.remove('active');
-                document.body.classList.remove('drawer-open');
-            }
-
-            // Event listeners for drawer
-            if (mobileMenuBtn) mobileMenuBtn.addEventListener('click', toggleDrawer);
-            if (closeDrawer) closeDrawer.addEventListener('click', closeDrawerFn);
-            if (drawerOverlay) drawerOverlay.addEventListener('click', closeDrawerFn);
-
-            // Close drawer on nav link click
-            document.querySelectorAll('.drawer-nav a').forEach(link => {
-                link.addEventListener('click', closeDrawerFn);
-            });
-
-            // --- Smooth scrolling for navigation links ---
-            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-                anchor.addEventListener('click', function (e) {
-                    e.preventDefault();
-                    const target = document.querySelector(this.getAttribute('href'));
-                    if (target) {
-                        target.scrollIntoView({
-                            behavior: 'smooth',
-                            block: 'start'
-                        });
-                    }
-                });
-            });
-
-            // --- Navbar background effect on scroll ---
-            const navbar = document.getElementById('navbar');
-            if (navbar) {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 50) {
-                        navbar.style.background = 'rgba(10, 10, 10, 0.98)';
-                    } else {
-                        navbar.style.background = 'rgba(10, 10, 10, 0.95)';
-                    }
-                });
-            }
-
-            // --- Fade-in animation on scroll using Intersection Observer ---
-            const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px -50px 0px'
-            };
-
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.classList.add('visible');
-                    }
-                });
-            }, observerOptions);
-
-            document.querySelectorAll('.fade-in').forEach(el => {
-                observer.observe(el);
-            });
-
-            // --- Add click ripple effect to buttons ---
-            document.querySelectorAll('.btn').forEach(button => {
-                button.addEventListener('click', function(e) {
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-                    
-                    ripple.style.cssText = `
-                        position: absolute;
-                        width: ${size}px;
-                        height: ${size}px;
-                        left: ${x}px;
-                        top: ${y}px;
-                        background: rgba(255, 255, 255, 0.1);
-                        border-radius: 50%;
-                        transform: scale(0);
-                        animation: ripple 0.6s ease-out;
-                        pointer-events: none;
-                    `;
-                    
-                    this.style.position = 'relative';
-                    this.style.overflow = 'hidden';
-                    
-                    this.appendChild(ripple);
-                    setTimeout(() => {
-                        ripple.remove();
-                    }, 600);
-                });
-            });
-
-            // --- Hide scroll indicator after scrolling down ---
-            const scrollIndicator = document.querySelector('.scroll-indicator');
-            if (scrollIndicator) {
-                window.addEventListener('scroll', () => {
-                    if (window.scrollY > 100) {
-                        scrollIndicator.style.opacity = '0';
-                    } else {
-                        scrollIndicator.style.opacity = '1';
-                    }
-                });
-            }
-        });
-    </script>
-</body>
-</html>>
-
     <!-- Features Section -->
     <section id="features" class="features">
-        <h2 class="fade-in">Why Choose Xelo Lite?</h2>
+        <h2>Why Choose Xelo Lite?</h2>
         <div class="features-grid">
             <div class="feature-card fade-in">
                 <div class="feature-icon">🎨</div>
@@ -328,8 +185,8 @@
     <!-- Comparison Section -->
     <section class="comparison">
         <div class="comparison-container">
-            <h2 class="fade-in">Xelo Client vs Xelo Lite</h2>
-            <div class="comparison-grid fade-in">
+            <h2>Xelo Client vs Xelo Lite</h2>
+            <div class="comparison-grid">
                 <div class="comparison-card">
                     <h3>Xelo Client</h3>
                     <ul>
@@ -356,4 +213,26 @@
                 </div>
             </div>
         </div>
-    </section
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="Xelo-mod.html">Xelo Mod</a>
+                <a href="#privacy">Privacy Policy</a>
+                <a href="#terms">Terms of Service</a>
+                <a href="#support">Support</a>
+                <a href="https://github.com/Xelo-Client" target="_blank">GitHub</a>
+                <a href="https://discord.gg/5cAhBna4WS" target="_blank">Discord</a>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2025 Xelo Client. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
