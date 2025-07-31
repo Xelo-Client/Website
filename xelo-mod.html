@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xelo Mod - Xelo Client</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 <body>
     <!-- Navigation -->
@@ -12,22 +13,18 @@
         <div class="nav-container">
             <div class="logo"><a href="index.html">Xelo Client</a></div>
             
-            <!-- Desktop Navigation -->
             <ul class="nav-links">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="lite.html">Xelo Lite</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#download">Download</a></li>
+                <li><a href="download.html">Download</a></li>
                 <li><a href="https://github.com/Xelo-Client" target="_blank">GitHub</a></li>
                 <li><a href="https://discord.gg/5cAhBna4WS" target="_blank">Discord</a></li>
                 <li><a href="#support">Support</a></li>
             </ul>
 
-            <!-- Mobile Menu Button -->
             <button class="mobile-menu-btn" id="mobileMenuBtn">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span class="material-icons">menu</span>
             </button>
         </div>
     </nav>
@@ -37,48 +34,31 @@
         <div class="drawer-content">
             <div class="drawer-header">
                 <div class="logo">Xelo Client</div>
-                <button class="close-btn" id="closeDrawer">×</button>
+                <button class="close-btn" id="closeDrawer"><span class="material-icons">close</span></button>
             </div>
             <ul class="drawer-nav">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="lite.html">Xelo Lite</a></li>
                 <li><a href="#features">Features</a></li>
-                <li><a href="#download">Download</a></li>
-                <li><a href="https://github.com/Xelo-Client" target="_blank">
-                    <span>GitHub</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                    </svg>
-                </a></li>
-                <li><a href="https://discord.gg/5cAhBna4WS" target="_blank">
-                    <span>Discord</span>
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                        <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.197.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
-                    </svg>
-                </a></li>
+                <li><a href="download.html">Download</a></li>
+                <li><a href="https://github.com/Xelo-Client" target="_blank">GitHub</a></li>
+                <li><a href="https://discord.gg/5cAhBna4WS" target="_blank">Discord</a></li>
                 <li><a href="#support">Support</a></li>
             </ul>
         </div>
     </div>
-
-    <!-- Drawer Overlay -->
     <div class="drawer-overlay" id="drawerOverlay"></div>
 
     <!-- Hero Section -->
     <section class="hero mod-hero">
         <div class="hero-content">
-            <div class="hero-badge">Standalone Module</div>
-            <h1>Xelo Mod</h1>
-            <p>The core .so module that powers Xelo Client. A standalone native library that can be integrated into other Minecraft Bedrock Edition projects and modloaders.</p>
-            <div class="cta-buttons">
-                <a href="#" class="btn btn-primary">Download Module</a>
+            <div class="hero-badge animate-fade-in-down">Standalone Module</div>
+            <h1 class="animate-fade-in-up">Xelo Mod</h1>
+            <p class="animate-fade-in-up delay-1">The core .so module that powers Xelo Client. A standalone native library that can be integrated into other Minecraft Bedrock Edition projects and modloaders.</p>
+            <div class="cta-buttons animate-fade-in-up delay-2">
+                <a href="download.html" class="btn btn-primary">Download Module</a>
                 <a href="#documentation" class="btn btn-secondary">View Documentation</a>
             </div>
-        </div>
-        <div class="scroll-indicator">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"/>
-            </svg>
         </div>
     </section>
 
@@ -86,124 +66,39 @@
     <section id="features" class="features">
         <h2>Xelo Mod Capabilities</h2>
         <div class="features-grid">
-            <div class="feature-card fade-in">
-                <div class="feature-icon">⚙️</div>
+            <div class="feature-card">
+                <span class="material-icons">memory</span>
                 <h3>Native Performance</h3>
                 <p>Compiled C++ module that provides low-level access to Minecraft's engine for maximum performance and efficiency.</p>
             </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🔧</div>
+            <div class="feature-card">
+                <span class="material-icons">extension</span>
                 <h3>Modular Design</h3>
                 <p>Clean, modular architecture that can be easily integrated into existing projects or used as a foundation for new clients.</p>
             </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🎯</div>
+            <div class="feature-card">
+                <span class="material-icons">star</span>
                 <h3>Core Features</h3>
                 <p>Includes essential game modifications, performance optimizations, and advanced features used in Xelo Client.</p>
             </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">📱</div>
+            <div class="feature-card">
+                <span class="material-icons">smartphone</span>
                 <h3>Android Optimized</h3>
                 <p>Specifically optimized for Android devices with ARM architecture support and efficient memory management.</p>
             </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">🔒</div>
+            <div class="feature-card">
+                <span class="material-icons">security</span>
                 <h3>Secure Integration</h3>
                 <p>Safe hooking mechanisms that don't compromise game stability or trigger anti-cheat systems.</p>
             </div>
-            <div class="feature-card fade-in">
-                <div class="feature-icon">📚</div>
+            <div class="feature-card">
+                <span class="material-icons">code</span>
                 <h3>Developer Friendly</h3>
                 <p>Comprehensive API documentation and examples for developers who want to integrate or extend the module.</p>
             </div>
         </div>
     </section>
-
-    <!-- Technical Specifications -->
-    <section class="tech-specs">
-        <div class="specs-container">
-            <h2>Technical Specifications</h2>
-            <div class="specs-grid">
-                <div class="spec-card">
-                    <h3>Architecture</h3>
-                    <ul>
-                        <li>ARM64 (AArch64) support</li>
-                        <li>ARM32 compatibility</li>
-                        <li>x86_64 for emulators</li>
-                        <li>Native C++ implementation</li>
-                    </ul>
-                </div>
-                <div class="spec-card">
-                    <h3>Compatibility</h3>
-                    <ul>
-                        <li>Minecraft Bedrock 1.16+</li>
-                        <li>Android 7.0+ (API 24+)</li>
-                        <li>Root and non-root devices</li>
-                        <li>Multiple mod loaders</li>
-                    </ul>
-                </div>
-                <div class="spec-card">
-                    <h3>Features</h3>
-                    <ul>
-                        <li>Memory patching system</li>
-                        <li>Function hooking framework</li>
-                        <li>Event system integration</li>
-                        <li>Performance monitoring</li>
-                    </ul>
-                </div>
-                <div class="spec-card">
-                    <h3>Integration</h3>
-                    <ul>
-                        <li>JNI interface</li>
-                        <li>Native library loading</li>
-                        <li>Runtime configuration</li>
-                        <li>Crash protection</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Download Section -->
-    <section id="download" class="download">
-        <h2>Download Xelo Mod</h2>
-        <p>Get the standalone Xelo Mod module for integration into your projects. Includes documentation and example implementations.</p>
-        <div class="download-options">
-            <div class="download-card">
-                <h3>Latest Release</h3>
-                <p>Xelo Mod v3.2.1</p>
-                <p class="version-info">Stable release with full documentation</p>
-                <a href="#" class="btn btn-primary">Download .so Module</a>
-            </div>
-            <div class="download-card">
-                <h3>Development Build</h3>
-                <p>Xelo Mod v3.3.0-dev</p>
-                <p class="version-info">Latest features, for developers only</p>
-                <a href="#" class="btn btn-secondary">Download Dev Build</a>
-            </div>
-            <div class="download-card">
-                <h3>Source Code</h3>
-                <p>Full source available</p>
-                <p class="version-info">Build from source, contribute to development</p>
-                <a href="https://github.com/Xelo-Client" target="_blank" class="btn btn-secondary">View on GitHub</a>
-            </div>
-        </div>
-        <div class="social-links">
-            <a href="https://github.com/Xelo-Client" target="_blank" class="social-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
-                </svg>
-                View Source Code
-            </a>
-            <a href="https://discord.gg/5cAhBna4WS" target="_blank" class="social-btn">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
-                    <path d="M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.928 1.793 8.18 1.793 12.062 0a.074.074 0 0 1 .078.01c.12.098.246.197.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.892.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.03z"/>
-                </svg>
-                Developer Support
-            </a>
-        </div>
-    </section>
-
+    
     <!-- Documentation Section -->
     <section id="documentation" class="documentation">
         <div class="docs-container">
@@ -215,9 +110,9 @@
                     <div class="code-snippet">
                         <code>
 // Load the Xelo Mod library<br>
-System.loadLibrary("Xelo_mod");<br><br>
-// Initialize the module<br>
-XeloMod.initialize();
+    invoke-static {v0}, Ljava/lang/System;->loadLibrary(Ljava/lang/String;)V
+
+    const-string v0, "mtbinloader2"
                         </code>
                     </div>
                 </div>
@@ -225,30 +120,10 @@ XeloMod.initialize();
                     <h3>Advanced Usage</h3>
                     <p>Advanced features and configuration options for power users.</p>
                     <ul>
-                        <li>Custom hook implementations</li>
-                        <li>Memory management</li>
-                        <li>Event handling systems</li>
-                        <li>Performance tuning</li>
-                    </ul>
-                </div>
-                <div class="doc-card">
-                    <h3>API Reference</h3>
-                    <p>Complete API documentation with examples and best practices.</p>
-                    <ul>
-                        <li>Function signatures</li>
-                        <li>Return values and errors</li>
-                        <li>Usage examples</li>
-                        <li>Migration guides</li>
-                    </ul>
-                </div>
-                <div class="doc-card">
-                    <h3>Community Examples</h3>
-                    <p>Real-world implementations and community contributions.</p>
-                    <ul>
-                        <li>Client integrations</li>
-                        <li>Mod loader examples</li>
-                        <li>Plugin development</li>
-                        <li>Community projects</li>
+                        <li><span class="material-icons">arrow_right</span> Custom hook implementations</li>
+                        <li><span class="material-icons">arrow_right</span> Memory management</li>
+                        <li><span class="material-icons">arrow_right</span> Event handling systems</li>
+                        <li><span class="material-icons">arrow_right</span> Performance tuning</li>
                     </ul>
                 </div>
             </div>
@@ -261,6 +136,7 @@ XeloMod.initialize();
             <div class="footer-links">
                 <a href="index.html">Home</a>
                 <a href="lite.html">Xelo Lite</a>
+                <a href="download.html">Download</a>
                 <a href="#privacy">Privacy Policy</a>
                 <a href="#terms">Terms of Service</a>
                 <a href="#support">Support</a>
@@ -268,7 +144,7 @@ XeloMod.initialize();
                 <a href="https://discord.gg/5cAhBna4WS" target="_blank">Discord</a>
             </div>
             <div class="copyright">
-                <p>&copy; 2025 Xelo Client. All rights reserved.</p>
+                <p>© 2025 Xelo Client. All rights reserved.</p>
             </div>
         </div>
     </footer>
