@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support Me</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #000;
+      color: #fff;
+      text-align: center;
+      padding: 40px;
+    }
+    .card {
+      background: #111;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(255,255,255,0.04);
+      display: inline-block;
+    }
+    h2, p {
+      color: #fff;
+    }
+    button {
+      background: #fff;
+      color: #111;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-weight: bold;
+      transition: background 0.2s, color 0.2s;
+    }
+    button:hover {
+      background: #333;
+      color: #fff;
+    }
+    img {
+      margin-top: 20px;
+      max-width: 250px;
+      border: 1px solid #fff;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>☕ Support My Work</h2>
+    <p>Scan the QR code or click the button below to donate.</p>
+    <img src="pay.png" alt="UPI QR Code">
+    <br>
+    <button onclick="window.location.href='upi://pay?pa=8133808877@axl&pn=Gobinda Basak&cu=INR'">
+      Pay with UPI
+    </button>
+    <p>only indian donation for now<p>
+  </div>
+</body>
+</html>
